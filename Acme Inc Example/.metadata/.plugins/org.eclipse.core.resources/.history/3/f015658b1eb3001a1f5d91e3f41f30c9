@@ -1,0 +1,66 @@
+package com.acme;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import com.acme.bo.Customer;
+import com.acme.bo.Employee;
+import com.acme.bo.Order;
+import com.acme.bo.Person;
+
+public class Controller {
+	
+	List<Customer> customers = new ArrayList<Customer>();
+	List<Employee> employees = new ArrayList<Employee>();
+	// CJS changet these lists to a single persons list
+	List<Person> persons = new ArrayList<Person>();
+	
+	List<OrderProcessor> allOrders = new ArrayList<OrderProcessor>();
+	
+	protected void runDemo() {
+		loadData();
+		showStatus();
+		
+	}
+	private void loadData() {
+		List<Order> orders1 = new ArrayList<Order>();
+		orders1.add(new Order("t123","LG 62 inch TV", new Date(),1234.34));
+		orders1.add(new Order("C5346","Spectre Laptop", new Date(),1500.34));
+		customers.add(new Customer("Joe","Namath","joe@gmail.com", "123", orders1));
+		customers.add(new Customer("Michael","Jordan","dunk@gmail.com", "124", null));
+		customers.add(new Customer("Hank","Aaron","slugger@gmail.com", "125", null));
+		
+		List<Order> orders2 = new ArrayList<Order>();
+		orders2.add(new Order("r123","Rollex", new Date(),11234.34));
+		orders2.add(new Order("b5346","Baseball", new Date(),15.34));
+		employees.add(new Employee("Danny","Devitto", "DD@Yahoo.com","A123",123213.23,"142231234", orders2));
+		employees.add(new Employee("Arnold","Schwarzeneger", "Arnie@Yahoo.com","B234",223213.23,"321323214", null));
+		
+		persons.addAll(customers);
+		persons.addAll(employees);
+		
+		allOrders.addAll(persons);
+	}
+	private void showStatus() {
+
+		for(OrderProcessor orderProcessor:allOrders) {
+			System.out.println(orderProcessor.getTotalPurchases());
+		}
+//		for(Person person:persons) {
+//			System.out.println("----------------------------");
+//			System.out.println(person.toString());
+//		}
+
+//		for(Customer customer:customers) {
+//			System.out.println("----------------------------");
+//			System.out.println(customer.toString());
+//		}
+//		System.out.println("==================================");
+//		for(Employee employee:employees) {
+//			System.out.println(employee.toString());
+//			System.out.println("----------------------------");
+//			
+//		}
+	}
+}

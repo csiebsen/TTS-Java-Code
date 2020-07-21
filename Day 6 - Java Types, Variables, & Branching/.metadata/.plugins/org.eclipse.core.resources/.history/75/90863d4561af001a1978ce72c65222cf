@@ -1,0 +1,15 @@
+package com.tts;
+
+public class Main {
+
+	public static void main(String[] args) {
+		long num1 = 123;
+		byte smallnum = (byte)3;
+		float fnum = (float)1234.234;
+		double dnum = 234.23;
+		
+		
+		System.out.println("Long is "+ num1);
+		
+	}
+}

@@ -1,0 +1,43 @@
+package com.tts;
+
+public class Controller {
+
+	public void helloWorld() {
+		System.out.println("helloWorld");
+	}
+
+	void CheckId(boolean validId, int age, boolean buyingAlc) {
+		if (validId) {
+			System.out.println("Valid ID presented");
+			if ((age > 21) && (buyingAlc)) {
+				System.out.println("Customer legal to purchase alcohol");
+			} else {
+				System.out.println("Can't purchase alcohol");
+			}
+		}
+	}
+	
+	public void printShirtSize(char shirt)
+	{
+	       String msg= " " ;
+	       switch(shirt)
+	       {
+	               case 's':
+	                      msg= "Shirt is small";
+	                      break;
+	                case 'm':
+	                      msg= "Shirt is medium";
+	                      break;
+	                case 'l':
+	                      msg= "Shirt is large";
+	                      break;
+	                 case 'x':
+	                      msg= "Shirt is Xtra large";
+	                      break;
+	                 default:
+	                      msg= "Unknown shirt size";
+	                      break;
+	       }
+	       System.out.println(msg);
+	}
+}

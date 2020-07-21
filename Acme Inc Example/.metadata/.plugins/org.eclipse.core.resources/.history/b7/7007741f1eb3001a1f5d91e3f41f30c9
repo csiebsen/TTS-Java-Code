@@ -1,0 +1,44 @@
+package com.acme.bo;
+
+import java.util.List;
+
+public class Customer extends Person{
+
+	private String customerId;
+
+	public Customer (String firstName,String lastName, String email, String id, List<Order> orders) {
+		super(firstName, lastName,  email, orders);
+		this.setCustomerId(id);
+	}
+	
+	public String getTotalPurchases() {
+		return getFirstName() + " " + getLastName() + " total purchase is " + calcPurchases();
+	};
+	
+	public double getDiscount() {
+		return .05;
+	}
+	public String getCustomerId() {
+		return customerId;
+	}
+
+	/**
+	 * Customer id must be numeric
+	 * @param customerId -
+	 */
+	public void setCustomerId(String customerId) {
+		try {
+			Integer.parseInt(customerId);
+		} catch (NumberFormatException e) {
+			throw new RuntimeException("Customer ID must be numeric [" + customerId +"]");
+		}
+
+		this.customerId = customerId;
+	}
+	
+	@Override
+	public String toString() {
+		String outPutString = super.toString();
+		return outPutString + "Customer Id: " + getCustomerId() + "\n" +  getOrders();
+	}
+}

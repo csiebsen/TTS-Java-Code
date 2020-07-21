@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Demo</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+</head>
+
+<body>
+    <h1>JQuery is OK</h1>
+    <a href="#">jQuery</a>
+    <p id="resizable">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem corporis, quibusdam a corrupti et
+        voluptate, ea recusandae aliquam culpa eaque atque in dolorum voluptatum eum unde officiis. Maxime, ratione
+        maiores?</p>
+    <p>Date: <input type="text" id="datepicker"></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $('#draggable').draggable();
+        })
+        $(function () {
+            $('#resizable').resizable();
+        })
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+package com.acme.bo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.acme.OrderProcessor;
+
+public abstract class Person implements OrderProcessor{
+
+	// Lab: create and add address object
+	// Lab: Add validation for email, require @ and period
+	
+	
+	private String firstName;
+	private String lastName;
+	private String email;
+	List<Order> orders = new ArrayList<Order>();
+	
+	public void setOrders(List<Order> orders) {
+		this.orders = orders;
+	}
+
+	public Person (String firstName,String lastName, String email, List<Order> orders) {
+		this.setFirstName(firstName);
+		this.setLastName(lastName);
+		this.setEmail(email);
+		this.setOrders(orders);
+	}
+	
+	public String getOrders() {
+		if (null == orders) return "";
+		String orderOutput = "";
+		for(Order order:orders) {
+			orderOutput = orderOutput + "   ----------------------------\n";
+			orderOutput = orderOutput + order.toString();
+		}
+		return orderOutput;
+	}
+
+	private double calcPurchases() {
+		double totalPrice = 0.0;
+		if (null != this.orders) {
+			for(Order order:this.orders) {
+				totalPrice += order.price;		
+			}
+		}
+		totalPrice = totalPrice * getDiscount();
+		return Math.round(totalPrice);
+	}
+	
+	
+	public String getTotalPurchases() {
+		return getFirstName() + " " + getLastName() + " total purchase is " + calcPurchases();
+	};
+		
+	@Override
+	public String toString() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("Name: " + firstName + " " + lastName + "\n");
+		sb.append("email: " + email + "\n");
+		return sb.toString();
+	}
+	
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		if(!email.contains("@") || !email.contains(".")) {
+			throw new RuntimeException("Email must have a @ and a . character [" +
+					email+ "]");
+		}
+		this.email = email;
+	}
+	
+}

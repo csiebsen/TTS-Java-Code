@@ -1,0 +1,19 @@
+package com.acme.enums;
+
+public enum WorkerTypeEnum {
+
+	FULL_TIME ("Full time"),
+	PART_TIME ("Part time"),
+	CONTRACTOR ("Contractor"),
+	SEASONAL ("Seasonal");
+	
+	private final String description;
+	
+	WorkerTypeEnum(String description){
+		this.description = description;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+}

@@ -1,0 +1,20 @@
+package com.acme;
+
+public interface OrderProcessor {
+
+	/**
+	 * Calcualtes total purchases less any discounts
+	 */
+	public double getDiscount();
+	
+	/**
+	 * Returns a string containing all orders
+	 */
+	public String getOrders();
+	
+	/**
+	 * Returns a string of total purchases for a order processor
+	 * @return
+	 */
+	public String getTotalPurchases();
+}

@@ -1,0 +1,14 @@
+package com.acme;
+
+import com.acme.util.StringUtils;
+
+public class AcmeMain {
+
+	public static void main(String[] args) {
+		
+		System.out.println(StringUtils.hasSpecialChars("&"));
+		Controller controller = new Controller();
+		controller.runDemo();
+	}
+	
+}

@@ -1,0 +1,11 @@
+package com.tts;
+
+public class Main {
+		static int numClasses = 0;	
+		final double TAX_RATE = 7.0;
+
+	public static void main(String[] args) {
+			//TAX_RATE = 4.0;
+	}
+
+}

@@ -1,0 +1,31 @@
+#header img {
+    width: 16px;
+    filter: invert(1);
+}
+#header li {
+    display:inline;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.header-cell {
+    background-color: black;
+    color: white;
+    font-size: 7px;
+    padding: 2px
+}
+#logo {
+    background-color: red;
+    color: white;
+    font-weight: lighter;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 2px;
+}
+#header-table{
+    border-spacing: 0px;
+}
+#header {
+    font-family: Verdana;
+}
+

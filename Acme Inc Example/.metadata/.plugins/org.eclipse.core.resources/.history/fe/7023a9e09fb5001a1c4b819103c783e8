@@ -1,0 +1,11 @@
+package com.acme.util;
+
+public class StringUtils {
+
+	public static boolean hasSpecialChars(String inString) {
+		if (inString.matches("!|@|#|%|^|&|(|)|_|-|=|[|]|?")) {
+		     return true;
+		}
+		return false;
+	}
+}

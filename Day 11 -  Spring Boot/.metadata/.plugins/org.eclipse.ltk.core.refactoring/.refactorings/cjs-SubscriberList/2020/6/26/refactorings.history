@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;cjs-SubscriberList/src/main/resources/templates/templates&apos; to &apos;subscriber&apos;" description="Rename resource &apos;templates&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/templates/templates" name="subscriber" stamp="1593270405930" updateReferences="true"/>
+</session>

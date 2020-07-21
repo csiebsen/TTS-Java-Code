@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.tts.h2explore.repository.CustomerRpository.java&apos; to &apos;CustomerRepository.java&apos;&#x0D;&#x0A;- Original project: &apos;demo-CJS-db&apos;&#x0D;&#x0A;- Original element: &apos;com.tts.h2explore.repository.CustomerRpository.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.tts.h2explore.repository.CustomerRepository.java&apos;" description="Rename compilation unit &apos;CustomerRpository.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.tts.h2explore.repository{CustomerRpository.java" name="CustomerRepository.java" references="false" stamp="1592940679673" version="1.0"/>
+</session>

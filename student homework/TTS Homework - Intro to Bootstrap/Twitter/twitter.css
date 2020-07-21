@@ -1,0 +1,39 @@
+
+form [type="search"] {
+  border-radius: 25px;
+  background-color: #F5F8FA;
+}
+.logo {
+  height: 35px;
+}
+.alsoLike {
+  background-color: #F5F8FA;
+  border-radius: 20px;
+}
+.alsoLike h3 {
+  margin-left: 15px;
+  margin-bottom: auto;
+}
+.alsoLike hr {
+  border-top: 1px dotted black;
+}
+
+.alsoLike button {
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.alsoLike img {
+  height: 35px;
+  border-radius: ;
+  float: left;
+  margin-left: 10px;
+}
+.alsoLike a {
+  font-weight: bold;
+  color: black;
+}
+
+.nav-item a {
+    color: black;
+}

@@ -1,0 +1,135 @@
+package com.tts;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Controller {
+
+	public void forDemo() {
+		ArrayList<String> fruitList = new ArrayList<String>();
+		fruitList.add("Apple");
+		fruitList.add("Banana");
+		fruitList.add("Grape");
+
+		System.out.println(fruitList);
+		
+		for (String fruit : fruitList){
+		  System.out.println(fruit);
+		}
+	}
+	
+	public void hashMapDemo() {
+		Map<String, Integer> person = new HashMap<String, Integer>();
+
+		// .put adds items to the hash map
+		person.put("Joan", 21);
+		person.put("Anna", 34);
+		person.put("Mike", 55);
+		person.put("Daniel", 42);
+
+		// show what the HashMap person looks like
+		System.out.println(person);
+		// => {Joan=21, Mike=55, Daniel=42, Anna=34}
+
+
+		//.get retrieves data from the hash map
+		Integer value = person.get("Joan");
+		//returns the value associated with the key
+		System.out.println(value);
+		// => 21 
+		
+		//.remove takes the specified key and it's value out of the hash map
+		person.remove("Mike");
+		System.out.println(person);
+		// => {Joan=21, Daniel=42, Anna=34}
+
+		//replace the value of a given key
+		person.put("Joan", 42); 
+		System.out.println(person);
+		// => {Joan=42, Daniel=42, Anna=34} //changes the associated value from 21 to 42
+
+		//checks for a key within a HashMap.  Returns a boolean value
+		System.out.println( person.containsKey("Daniel") );
+		// => true
+
+		//checks for a key within a HashMap.  Returns a boolean value
+		System.out.println( person.containsValue(34) );
+		// => true
+
+		//Returns true if this map contains no key-value mappings.
+		System.out.println( person.isEmpty() );
+		// => false
+	}
+	
+	public void stringToArrayList() {
+		// Create a new string
+		String myString = "I really love icecream!";
+
+		// Create another string that holds the split version of the first
+		String str[] = myString.split(" ");      
+
+		// Store the contents of our split string as elements in
+		// arrayString using the Array.asList to convert the string into a ArrayList
+		List<String> arrayString = Arrays.asList(str);
+		// =>[I, really, love, ice cream!] //Turns the string myString into a ArrayList
+		System.out.println(arrayString);
+		
+		String[] arrayString2 = (String[])arrayString.toArray();
+		String myStringAgain = Arrays.toString(arrayString2);
+		System.out.println(myStringAgain);
+		
+		System.out.println(myStringAgain.replace("[","").replace("]","").replace(",", " "));
+	}
+	
+	public void arrayListDemo() {
+		ArrayList<String> names = new ArrayList<String>();  
+		//Creates an array of string called "names" 
+
+		ArrayList<String> otherNames = new ArrayList<String>(5);  
+		//Creates an array of strings called "otherNames" that has 5 indices
+		//The size is not permanent and can grow or shrink.  
+
+
+		//adds elements to the end of the array
+		names.add("John");
+		names.add("Heather");
+		names.add("Joe");
+
+		//adds an element to a specific index
+		names.add(2, "Finn"); //adds "Finn" to index 2, moves "Joe" to index 3 
+
+		//retrieves element values based on index number      
+		String name = names.get(1);  //returns "Heather"
+		System.out.printf("Hi, %s\n", name); // prints Heather and create new line
+
+		//removes an element from an ArrayList
+		names.remove("Finn"); //takes "Finn" out of the list, moves "Joe" back to index 2
+		// index 3 no longer exists  
+		System.out.println(names);
+		
+		//reverse the contents by calling Collections.reverse(ArrayListName)
+		Collections.reverse(names);
+		// =>[Finn, Joe, Heather, John] after reversing the elements
+		System.out.println(names);
+
+		//Get the size of the ArrayList
+		System.out.println(names.size());
+		// => 4
+
+		//Checks the array list for a specific element
+		boolean flag = names.contains("Heather");
+		// => true
+		System.out.println(flag);
+
+		//remove all elements from list
+		names.clear(); 
+		// prints size of names
+		System.out.println(names.size());
+		// => 0
+		
+	}
+}

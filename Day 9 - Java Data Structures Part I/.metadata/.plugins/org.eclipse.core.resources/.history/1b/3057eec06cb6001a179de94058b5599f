@@ -1,0 +1,78 @@
+package com.tts;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class Controller {
+
+	
+	public void stringToArrayList() {
+		// Create a new string
+		String myString = "I really love icecream!";
+
+		// Create another string that holds the split version of the first
+		String str[] = myString.split(" ");      
+
+		// Store the contents of our split string as elements in
+		// arrayString using the Array.asList to convert the string into a ArrayList
+		List<String> arrayString = Arrays.asList(str);
+		// =>[I, really, love, ice cream!] //Turns the string myString into a ArrayList
+		System.out.println(arrayString);
+		
+		String[] arrayString2 = (String[])arrayString.toArray();
+		String myStringAgain = Arrays.toString(arrayString2);
+		System.out.println(myStringAgain);
+		
+		
+	}
+	
+	public void arrayListDemo() {
+		ArrayList<String> names = new ArrayList<String>();  
+		//Creates an array of string called "names" 
+
+		ArrayList<String> otherNames = new ArrayList<String>(5);  
+		//Creates an array of strings called "otherNames" that has 5 indices
+		//The size is not permanent and can grow or shrink.  
+
+
+		//adds elements to the end of the array
+		names.add("John");
+		names.add("Heather");
+		names.add("Joe");
+
+		//adds an element to a specific index
+		names.add(2, "Finn"); //adds "Finn" to index 2, moves "Joe" to index 3 
+
+		//retrieves element values based on index number      
+		String name = names.get(1);  //returns "Heather"
+		System.out.printf("Hi, %s\n", name); // prints Heather and create new line
+
+		//removes an element from an ArrayList
+		names.remove("Finn"); //takes "Finn" out of the list, moves "Joe" back to index 2
+		// index 3 no longer exists  
+		System.out.println(names);
+		
+		//reverse the contents by calling Collections.reverse(ArrayListName)
+		Collections.reverse(names);
+		// =>[Finn, Joe, Heather, John] after reversing the elements
+		System.out.println(names);
+
+		//Get the size of the ArrayList
+		System.out.println(names.size());
+		// => 4
+
+		//Checks the array list for a specific element
+		boolean flag = names.contains("Heather");
+		// => true
+		System.out.println(flag);
+
+		//remove all elements from list
+		names.clear(); 
+		// prints size of names
+		System.out.println(names.size());
+		// => 0
+		
+	}
+}

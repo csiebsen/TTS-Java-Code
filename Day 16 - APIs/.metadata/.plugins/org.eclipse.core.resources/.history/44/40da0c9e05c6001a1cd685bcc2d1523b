@@ -1,0 +1,10 @@
+package com.tts.MapsApp.service;
+
+import org.springframework.boot.origin.TextResourceOrigin.Location;
+
+import lombok.Data;
+
+@Data
+public class Geometry {
+    private Location location;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javacript</title>
+<style>
+    .myClass {
+        color:darkblue;
+    }
+</style>
+
+</head>
+
+
+<body>
+    <h1 id="header">My Page</h1>
+    <h2 class="subHeader">First sub header</h2>
+    <h2 class="subHeader">Second sub header</h2>
+    <script src="helloWorld.js"></script>
+    <script>
+///////  pass in multiple values
+var myName = prompt("Name?");
+var newLang = prompt("Language?");
+var welcomeSaying = prompt("How do you greet others in that language?")
+ 
+function greeting(name, language, saying) {
+	alert(saying + " " + name + ", nice to speak with someone who knows " + language);
+}
+greeting(myName, newLang, welcomeSaying);
+
+    </script>
+
+</body>
+
+</html>

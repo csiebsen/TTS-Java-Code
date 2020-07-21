@@ -1,0 +1,72 @@
+package com.acme.bo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.acme.OrderProcessor;
+
+public class Person implements OrderProcessor{
+
+	// Lab: create and add address object
+	// Lab: Add validation for email, require @ and period
+	
+	
+	private String firstName;
+	private String lastName;
+	private String email;
+	List<Double> orders = new ArrayList<Double>();
+
+	public Person (String firstName,String lastName, String email) {
+		this.setFirstName(firstName);
+		this.setLastName(lastName);
+		this.setEmail(email);
+	}
+	
+	public void addOrder(double orderTotal) {
+		orders.add(orderTotal);
+	};
+
+
+	public String getTotalPurchaseAmount() {
+		double totOrders = 0.0;
+		if (null != orders) {
+			for(double price:orders) {
+				totOrders += price;
+			}
+		}
+		return this.getFirstName() + " " + this.getLastName() + " Order total = " +
+			totOrders;
+	};	
+	
+	@Override
+	public String toString() {
+		StringBuffer sb = new StringBuffer();
+		sb.append("Name: " + firstName + " " + lastName + "\n");
+		sb.append("email: " + email + "\n");
+		return sb.toString();
+	}
+	
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		if(!email.contains("@") || !email.contains(".")) {
+			throw new RuntimeException("Email must have a @ and a . character [" +
+					email+ "]");
+		}
+		this.email = email;
+	}
+	
+}

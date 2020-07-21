@@ -1,0 +1,36 @@
+var map;
+var coords = {lat: 45.4408, lng: 12.3155};
+
+
+
+
+function initMap() {
+	var image = {
+			  url: '/airplane.png',
+			  size: new google.maps.Size(71, 71),
+			  origin: new google.maps.Point(0, 0),
+			  anchor: new google.maps.Point(17, 34),
+			  scaledSize: new google.maps.Size(25, 25)
+			};
+
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: coords,
+        zoom: 10,
+        scrollwheel: false
+    });
+    var marker = new google.maps.Marker({
+        position: coords,
+        map: map,
+        icon: image,
+        animation: google.maps.Animation.BOUNCE
+    });
+    var contentString = '<h2>Columbus, OH</h2> <p>Where your dreams come true.</p>';
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+       infowindow.open(map,marker);
+    });
+}

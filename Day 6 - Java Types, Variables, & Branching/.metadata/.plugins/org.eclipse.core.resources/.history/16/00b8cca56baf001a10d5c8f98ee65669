@@ -1,0 +1,13 @@
+package com.tts;
+
+import java.util.Date;
+
+public class Main {
+
+
+	public static void main(String[] args) {
+		String str = String.format("%t %s was found at position %d. %s", new Date(),"mars", 3, "Joe"); // show message doc in Eclipse, many params
+		System.out.println(str);
+	}
+
+}

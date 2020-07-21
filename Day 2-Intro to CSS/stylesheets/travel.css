@@ -1,0 +1,50 @@
+body {
+    background-color: cornsilk;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    font-family: Verdana;
+    padding-left: 40px;
+}
+.quote {
+    font-style: italic;
+}
+#top {
+    font-family: Verdana;
+}
+p {
+    font-family: 'Trebuchet MS';
+    color: darkolivegreen;
+    padding-left: 60px;
+    padding-right: 40px;
+}
+[continent] {
+    color: darkviolet;
+}
+[continent="europe"] {
+    color: darkgreen;
+}
+a:hover {
+    color: darkslategrey;
+}
+a:visited {
+    color: orangered;
+}
+table {
+    background-color: cyan;
+    width: 300px;
+    border: 2px solid green;
+    padding: 10px;
+    margin: 20px;
+}
+table th {
+    background-color: salmon;
+}
+li {
+    display: inline;
+    padding-left: 50px;
+}
+
+

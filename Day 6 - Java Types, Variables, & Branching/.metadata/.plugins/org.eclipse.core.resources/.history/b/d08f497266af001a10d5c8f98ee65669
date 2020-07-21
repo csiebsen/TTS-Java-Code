@@ -1,0 +1,10 @@
+package com.tts;
+
+public class Main {
+	Boolean b1 = new Boolean(true);
+	b1 = true;
+	
+	
+	
+
+}

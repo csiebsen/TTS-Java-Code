@@ -1,0 +1,16 @@
+package com.tts;
+
+import java.util.Scanner;
+
+public class Main {
+
+	  public static void main(String[] args) 
+	  {
+		  Scanner scanner = new Scanner(System.in);
+		  System.out.println("Type an animal and I'll echo it back");
+		  String animal = scanner.nextLine();
+		  System.out.println(animal);
+
+	  }
+
+}

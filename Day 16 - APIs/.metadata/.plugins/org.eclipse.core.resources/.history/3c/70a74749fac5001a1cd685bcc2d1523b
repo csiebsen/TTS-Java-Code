@@ -1,0 +1,16 @@
+var map;
+var coords = {lat: 45.4408, lng: 12.3155};
+var image = {url: '/aiplane.png', 
+	    scaledSize: new google.maps.Size(50, 50)};
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: coords,
+        zoom: 10,
+        scrollwheel: false
+    });
+    var marker = new google.maps.Marker({
+        position: coords,
+        map: map
+    });
+}

@@ -1,0 +1,22 @@
+package com.tts;
+
+public class Main {
+
+	public static void main(String[] args) {
+			System.out.println(pow(5, 3));
+		}
+	
+	public static int[] pow(int size, int power) {
+		// method return an array of size with each array index rasied to the value of power
+		int[] returnArray = new int[size];
+		
+		for(int i:returnArray) {
+			System.out.println(i);
+		}
+		
+	
+		return returnArray;
+	}
+		
+	}
+

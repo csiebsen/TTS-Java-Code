@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Maps</title>
+    <link rel="stylesheet" href="custom.css">
+  </head>
+  <body>
+  <h1>Google Map TTS Project</h1>
+    <div id="map"></div>
+	<script src="/custom.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0uHbBetTr-1wjV4cZJ8i4OvvGB5JSW8w&callback=initMap"
+    async defer></script>
+  </body>
+</html>

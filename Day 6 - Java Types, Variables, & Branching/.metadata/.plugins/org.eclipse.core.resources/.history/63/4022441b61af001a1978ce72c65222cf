@@ -1,0 +1,36 @@
+package com.tts;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		
+		// String equals
+			// These two have the same value
+			boolean test1 = new String("test").equals("test");
+			System.out.println(test1);
+
+				// ... but they are not the same object
+			boolean test2 = new String("test") == new String("test"); // --> false
+			System.out.println(test2);
+		
+		int age = 19;
+
+		if (age < 18) {
+			System.out.println("You are too young");
+		} else {
+			String name = "Joe";
+			String adverb = "smokey";
+			String noun = "horse";
+			String noun2 = "leg";
+			int days = 5;
+			String yourName = "Chuck";
+
+			System.out.println("Dear" + name + ",");
+			System.out.println("You are " + adverb + " and I want to be your " + noun + "! I want to go to the " + noun2
+					+ " with you in " + days + " days.");
+			System.out.println("Sincerely, " + yourName);
+		}
+
+	}
+}

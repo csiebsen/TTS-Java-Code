@@ -1,0 +1,13 @@
+package com.tts;
+
+public class Main {
+	Boolean b1 = new Boolean(true);
+	Integer i1 = new Integer(345);
+	
+	b1 = true;
+	i1 = 345;
+	
+	
+	
+
+}

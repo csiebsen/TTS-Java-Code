@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.springframework.boot.origin.TextResourceOrigin.Location"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.parsing.Location"/>
+<fullyQualifiedTypeName name="javax.tools.DocumentationTool.Location"/>
+<fullyQualifiedTypeName name="javax.xml.stream.Location"/>
+<fullyQualifiedTypeName name="com.tts.MapsApp.service.Location"/>
+</qualifiedTypeNameHistroy>

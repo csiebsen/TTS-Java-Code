@@ -1,0 +1,37 @@
+package com.tts;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Main {
+
+		
+//		Controller controller = new Controller();
+//		controller.forDemo();;
+		
+		public static void main(String[] args) {
+			
+			
+			HashMap<String, String> cars = new HashMap();
+			// adding items to hashmap
+			cars.put("Ford","F-150");
+			cars.put("Civic","Honda");
+			cars.put("Kia","Sorento");
+			cars.put("Dodge","Viper");
+			cars.put("Subaru","Forester");
+			cars.put("VW", "Jetta");
+			cars.put("Jeep", "Wrangler");
+			// ask user what MODEL car they are looking for
+			System.out.println("What car model are you looking for?");
+			Scanner car = new Scanner(System.in);
+			String carModel = car.nextLine();
+			if(cars.containsKey(carModel)) {
+				System.out.println("Nice! Our selction of " + cars.get(carModel) + "s" + " are right over here! Follow me!");
+			}
+			else {
+				System.out.println("We do not currently have that in stock, Sorry.");
+			}
+		}
+
+	}
+

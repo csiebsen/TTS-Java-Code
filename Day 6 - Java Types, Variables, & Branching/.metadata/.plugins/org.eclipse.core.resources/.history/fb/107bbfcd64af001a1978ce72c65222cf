@@ -1,0 +1,35 @@
+package com.tts;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		
+		
+		int x = 5;
+		int y = 10;
+		int z = 11;
+		boolean fun = true;
+		boolean done = false;
+
+		int modulus = z%x;  // returns 1
+
+		int after = x++;
+		int before = ++x;
+		
+		System.out.println(after + " " + before);
+
+		
+		
+		
+		
+		
+		long BigLong = 230L;          // long (l, L)  
+		float SomeFloat = 927.42f;    // float (f, F)  
+		double someDbl = 392.2d;      // double (d, D)  
+		double wishfulSalary = 123_000_100_325.0d; // stored/printed as 123000100325.0
+
+		System.out.println("salary = " + wishfulSalary);
+		
+	}
+}

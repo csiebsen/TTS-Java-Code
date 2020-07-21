@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Homework Banner Version 2</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        #header {
+            font-family: Verdana;
+        }
+
+        #header li {
+            float: left;
+        }
+
+        #header li a {
+            color: white;
+            text-align: center;
+            padding-right: 16px;
+            padding-left: 16px;
+            padding-top: 20px;
+            text-decoration: none;
+        }
+
+        #header li a:hover:not(.active) {
+            background-color: black;
+        }
+
+        .active {
+            background-color: #4CAF50;
+        }
+
+        #header img {
+            width: 16px;
+            filter: invert(1);
+        }
+
+        #logo {
+            background-color: red;
+            color: white;
+            font-weight: lighter;
+            font-size: 20px;
+            padding-top: 5px;
+            padding-bottom: 16px;
+            padding-left: 0px;
+        }
+
+        .header-link {
+            background-color: black;
+            color: white;
+            font-size: 11px;
+            padding: 15px
+        }
+
+        .header-rightlink {
+            background-color: black;
+            color: white;
+            font-size: 9px;
+            --padding-top: 5px;
+            vertical-align: top;
+        }
+
+        #search-box {
+            padding-top: 14px;
+        }
+
+        .formSubmit input[type="submit"] {
+            background-color: #d71e28;
+            border: 0 none;
+            border-radius: 8px;
+            color: #fff;
+            font-family: verdana, Arial, sans-serif;
+            font-size: 16px;
+            height: 40px;
+            text-align: center;
+            width: 184px;
+        }
+
+        .formSubmit input[type=submit]:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="header">
+        <ul>
+            <li id="logo"><a href="#home">Logo</a></li>
+            <li class="header-link"><a href="#products">Products</a></li>
+            <li class="header-link"><a href="#music">Music</a></li>
+            <li class="header-link"><a href="#play">Play</a></li>
+            <li class="header-link"><a href="#connect">Connect</a></li>
+            <li id="search-box"><input name="searchCriteria" /><img src="images/Search-icon.png" /></li>
+            <li style="float:right; padding-top:10px;">
+                <ul>
+                    <li class="header-rightlink"><a href="#signin">Sign In /</a></li>
+
+                    <li class="header-rightlink"><a href="#Dealer">Dealer Locator</a></li>
+                </ul>
+                <ul>
+                    <li style="float:right" class="header-rightlink"><a href="#viewCart">View Cart<img
+                                src="images/shopping-cart-icon.svg" /></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <br><br>
+
+    <div class="formSubmit">
+        <input type="submit" value="Sign On" name="btnSignon" id="btnSignon">
+    </div>
+</body>
+
+</html>

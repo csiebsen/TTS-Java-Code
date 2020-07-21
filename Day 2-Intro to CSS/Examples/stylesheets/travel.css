@@ -1,0 +1,55 @@
+body {
+    background-color: azure;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    font-family: Verdana;
+    padding-left: 40px;
+}
+p {
+    font-family: 'Trebuchet MS';
+    padding-left: 60px;
+    padding-right: 40px;
+}
+/* targeting by class (class="myClass") */
+.quote {
+    font-style: italic;
+}
+
+/* targeting by id (id="myId") */
+#top {
+    font-family: Verdana;
+}
+
+[continent] {
+    color: darkviolet;
+}
+[continent="europe"] {
+    color: darkgreen;
+}
+
+/* pseudo class selectors */
+a:hover {
+    color: purple;
+}
+a:visited {
+    color: orange;
+}
+
+table {
+    width: 300px;
+    border: 2px solid slategray;
+    padding: 10px;
+    margin: 20px;
+    background-color: darkcyan;
+}
+table th {
+    background-color: salmon;
+}
+
+li {
+    display: inline;
+    padding-left: 50px;
+}

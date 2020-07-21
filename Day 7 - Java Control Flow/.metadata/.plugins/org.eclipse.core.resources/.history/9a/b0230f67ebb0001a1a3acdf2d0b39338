@@ -1,0 +1,19 @@
+package com.tts;
+
+public class Controller {
+
+	public void helloWorld() {
+		System.out.println("helloWorld");
+	}
+
+	void CheckId(boolean validId, int age, boolean buyingAlc) {
+		if (validId) {
+			System.out.println("Valid ID presented");
+			if ((age > 21) && (buyingAlc)) {
+				System.out.println("Customer legal to purchase alcohol");
+			} else {
+				System.out.println("Can't purchase alcohol");
+			}
+		}
+	}
+}

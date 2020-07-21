@@ -1,0 +1,17 @@
+package com.tts; 
+
+public class Main {
+
+	public static void main(String[] args) {
+		String name = "Bill";
+		int age = 29;
+		boolean married = true;
+		double hourlyRate = 60.02;
+		
+		System.out.println("Hello " + name);
+		System.out.println("age: " + age);
+		System.out.println("married: " + married);
+		System.out.println("Rate: " + hourlyRate);
+
+	}
+}

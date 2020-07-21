@@ -1,0 +1,12 @@
+package com.acme.util;
+
+public class StringUtils {
+
+	public static boolean hasSpecialChars(String inString) {
+		char[] inArray = inString.toCharArray(inString);
+		if (inString.contains("!|@|#|%|^|&|(|)|_|-|=|[|]|\\*|\\?")) {
+		     return true;
+		}
+		return false;
+	}
+}

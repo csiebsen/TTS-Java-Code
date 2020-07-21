@@ -1,0 +1,15 @@
+package com.acme;
+
+public interface OrderProcessor {
+
+	/**
+	 * Add an order
+	 */
+	public void addOrder(double orderTotal);
+
+	/**
+	 * Returns a string of total purchasevalue for a order processor
+	 * @return
+	 */
+	public String getTotalPurchaseValue();
+}

@@ -1,0 +1,1 @@
+INDEX VERSION 1.4+C:\TTS\Day 16 - APIs\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
